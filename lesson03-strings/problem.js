@@ -31,6 +31,22 @@ function stringMatching(text, pattern) {
   // TODO: Implement the string matching algorithm
   // Return an array of indices where the pattern is found in the text
   // If the pattern is not found, return an empty array
+
+  if(pattern.length == 0){
+    return [];
+  }
+
+  let index = 0;
+  let result = [];
+  while(index < text.length){
+    let searched = text.indexOf(pattern, index);
+    if(searched == -1){
+      return result;
+    }
+    result.push(searched);
+    index = searched + 1;
+  }
+  return result;
 }
 
 module.exports = stringMatching;

@@ -11,6 +11,22 @@
  * @returns {boolean} - True if the string is a palindrome, false otherwise.
  */
 function isPalindrome(str) {
+  let filteredStr = "";
+  str = str.split("");
+
+  for (let index of str) {
+    if((index >= 'a' && index <= 'z') || (index >= 'A' && index <= 'Z')){
+      filteredStr += index.toLowerCase();
+    }
+  }
+
+  for(let i = 0; i < filteredStr.length; i++){
+    if(filteredStr[i] != filteredStr[filteredStr.length - 1 - i]){
+      return false;
+    }
+  }
+
+  return true;
   // your code here
 }
 
