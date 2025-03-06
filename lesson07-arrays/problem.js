@@ -5,4 +5,15 @@
 // // removeDuplicates([1, 2, 3, 4, 5]); // => [1, 2, 3, 4, 5]
 module.exports = function removeDuplicates(arr) {
   // your code here
+  let result = [];
+  let set = new Set();
+
+  for(let i = 0; i < arr.length; i++){
+    if(!set.has(arr[i])){
+      set.add(arr[i]);
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
 };
