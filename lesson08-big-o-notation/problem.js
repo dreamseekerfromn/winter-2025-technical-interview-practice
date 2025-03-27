@@ -7,6 +7,17 @@
  */
 function sumConsecutiveNumbers(n) {
   // Your code here
+  if(n < 0){
+    return null;
+  }
+
+  let result = 0;
+
+  for(; n > 0; n--){
+    result += n;
+  }
+  
+  return result;
 }
 
 module.exports = sumConsecutiveNumbers;
